@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { PageProps } from './styleTypes'
 
 
 export const DARK = '#13131313'
@@ -54,5 +55,24 @@ cursor: pointer;
 &:focus{
     border: 1px solid #ffff;
 }
-
 `
+
+
+export const Page = styled.div<PageProps>`
+background-color: #1a1a1a;
+width: 100%;
+height: 100%;
+justify-content: ${({ justifyContent }) => justifyContent};
+display: ${({ display }) => display};
+align-items: ${({ alignItems }) => alignItems}
+`
+
+export const ConversationSidebarStyle = styled.aside`
+width: 350px;
+height: 100%;
+background-color: #1f1f1f;
+border-right: 1px solid #aaa;
+`
+
+
+export const ConversationChannelPageStyle = styled.div``
